@@ -29,7 +29,7 @@ namespace DesafioFundamentos.Models
             {
                 Console.WriteLine("Digite a quantidade de horas que o veículo permaneceu estacionado:");
                 int horas = int.Parse(Console.ReadLine());
-                decimal valorTotal = precoInicial + (precoPorHora * horas); 
+                decimal valorTotal = Convert.ToDecimal(precoInicial + (precoPorHora * horas)); 
                 
                 veiculos.Remove(placa);
 
@@ -40,7 +40,7 @@ namespace DesafioFundamentos.Models
                 Console.WriteLine("Desculpe, esse veículo não está estacionado aqui. Confira se digitou a placa corretamente");
             }
         }
-
+        int i = 1;    
         public void ListarVeiculos()
         {
             // Verifica se há veículos no estacionamento
@@ -48,8 +48,8 @@ namespace DesafioFundamentos.Models
             {
                 Console.WriteLine("Os veículos estacionados são:");
                 foreach(string carros in veiculos ){
-                    int i = 1;
-                    Console.Write(i + "° - " + carros);
+                    
+                    Console.Write(i + "° - " + carros + "\n");
 
                     i++;
 
